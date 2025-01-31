@@ -1,11 +1,11 @@
 ### Inspection
 | Display Name | Description | Windows/Linux | macOS |
 |--------------|-------------|---------------|-------|
-| Focus Tracking | Highlights the currently focused element in the application. | Ctrl+Shift+K | Cmd+Shift+K |
-| Inspect Element | Selects and inspects UI elements by clicking on them in the application. | Ctrl+Shift+C | Cmd+Shift+C |
-| Highlight Elements | Toggles real-time highlighting of UI elements. | Ctrl+Shift+H | Cmd+Shift+H |
-| Show Overlay Rulers | Shows or hides measurement rulers in the overlay. | Ctrl+Shift+R | Cmd+Shift+R |
-| Show Overlay Info | Shows or hides detailed information in the overlay. | Ctrl+Shift+D | Cmd+Shift+D |
+| Focus Tracking | Highlights the currently focused element in the application.<br>Enabled in both Developer Tools and the target application. | Ctrl+Shift+K | Cmd+Shift+K |
+| Inspect Element | Selects and inspects UI elements by clicking on them in the application.<br>Enabled in both Developer Tools and the target application. | Ctrl+Shift+C | Cmd+Shift+C |
+| Highlight Elements | Toggles real-time highlighting of UI elements.<br>Enabled in both Developer Tools and the target application. | Ctrl+Shift+H | Cmd+Shift+H |
+| Show Overlay Rulers | Shows or hides measurement rulers in the overlay.<br>Enabled in both Developer Tools and the target application. | Ctrl+Shift+R | Cmd+Shift+R |
+| Show Overlay Info | Shows or hides detailed information in the overlay.<br>Enabled in both Developer Tools and the target application. | Ctrl+Shift+D | Cmd+Shift+D |
 | Set Breakpoint | Sets a breakpoint on a property or event. | F9 | F9 |
 
 ### Search & Navigation
