@@ -1,4 +1,6 @@
-### Inspection
+# Application Shortcuts
+
+## Inspection
 | Display Name | Description | Windows/Linux | macOS |
 |--------------|-------------|---------------|-------|
 | Focus Tracking | Highlights the currently focused element in the application.<br>Enabled in both Developer Tools and the target application. | Ctrl+Shift+K | Cmd+Shift+K |
@@ -6,9 +8,10 @@
 | Highlight Elements | Toggles real-time highlighting of UI elements.<br>Enabled in both Developer Tools and the target application. | Ctrl+Shift+H | Cmd+Shift+H |
 | Show Overlay Rulers | Shows or hides measurement rulers in the overlay.<br>Enabled in both Developer Tools and the target application. | Ctrl+Shift+R | Cmd+Shift+R |
 | Show Overlay Info | Shows or hides detailed information in the overlay.<br>Enabled in both Developer Tools and the target application. | Ctrl+Shift+D | Cmd+Shift+D |
+| Toggle TopMost | Toggles Developer Tools top most mode.<br>Enabled in both Developer Tools and the target application. | Ctrl+Shift+T | Cmd+Shift+T |
 | Set Breakpoint | Sets a breakpoint on a property or event. | F9 | F9 |
 
-### Search & Navigation
+## Search & Navigation
 | Display Name | Description | Windows/Linux | macOS |
 |--------------|-------------|---------------|-------|
 | Search Current List | Activates search functionality in the current tool. | Ctrl+F | Cmd+F |
@@ -17,7 +20,7 @@
 | Next Tool | Switches to the next developer tool. | Ctrl+] | Cmd+] |
 | Previous Tool | Switches to the previous developer tool. | Ctrl+[ | Cmd+[ |
 
-### Layout & Views
+## Layout & Views
 | Display Name | Description | Windows/Linux | macOS |
 |--------------|-------------|---------------|-------|
 | Refresh Current View | Refreshes the current view. | F5 | F5 |
@@ -27,7 +30,7 @@
 | Show Tools | Shows or hides the tools panel. | Alt+2 | Option+2 |
 | Reset Layout | Resets the developer tools window layout to default. | Unassigned | Unassigned |
 
-### Tools
+## Tools
 | Display Name | Description | Windows/Linux | macOS |
 |--------------|-------------|---------------|-------|
 | Open Elements | Opens the Elements inspection tool for viewing UI elements. | Unassigned | Unassigned |
