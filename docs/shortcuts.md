@@ -1,6 +1,7 @@
-# Application Shortcuts
+# Developer Tools Shortcuts
 
 ## Inspection
+
 | Display Name | Description | Windows/Linux | macOS |
 |--------------|-------------|---------------|-------|
 | Focus Tracking | Highlights the currently focused element in the application.<br>Enabled in both Developer Tools and the target application. | Ctrl+Shift+K | Cmd+Shift+K |
@@ -12,6 +13,7 @@
 | Set Breakpoint | Sets a breakpoint on a property or event. | F9 | F9 |
 
 ## Search & Navigation
+
 | Display Name | Description | Windows/Linux | macOS |
 |--------------|-------------|---------------|-------|
 | Search Current List | Activates search functionality in the current tool. | Ctrl+F | Cmd+F |
@@ -21,6 +23,7 @@
 | Previous Tool | Switches to the previous developer tool. | Ctrl+[ | Cmd+[ |
 
 ## Layout & Views
+
 | Display Name | Description | Windows/Linux | macOS |
 |--------------|-------------|---------------|-------|
 | Refresh Current View | Refreshes the current view. | F5 | F5 |
@@ -31,6 +34,7 @@
 | Reset Layout | Resets the developer tools window layout to default. | Unassigned | Unassigned |
 
 ## Tools
+
 | Display Name | Description | Windows/Linux | macOS |
 |--------------|-------------|---------------|-------|
 | Open Elements | Opens the Elements inspection tool for viewing UI elements. | Unassigned | Unassigned |

@@ -1,4 +1,4 @@
-# Application Settings
+# Developer Tools Settings
 
 | Category | Setting | Description | Default Value |
 |----------|---------|-------------|---------------|
