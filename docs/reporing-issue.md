@@ -43,10 +43,10 @@ By default, it does not write any logs.
 To enable logging you need to setup it in `DeveloperToolsOptions`:
 
 ```csharp
-application.AttachDeveloperTools(new DeveloperToolsOptions
+application.AttachDeveloperTools(o =>
 {
     // `DiagnosticLogger` is a public abstract class, which can be implemented by user code.
     // `CreateConsole` returns a built-in Console.Out/Error based implementation.
-    DiagnosticLogger = DiagnosticLogger.CreateConsole()
+    o.DiagnosticLogger = DiagnosticLogger.CreateConsole()
 })
 ```

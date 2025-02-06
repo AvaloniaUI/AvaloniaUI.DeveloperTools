@@ -4,7 +4,6 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
-using AvaloniaUI.DiagnosticsSupport;
 using Serilog;
 using Serilog.Core;
 using SimpleToDoList.Services;

@@ -22,9 +22,9 @@ By default, `DiagnosticsSupport` package attempts to run global `avdt` .NET tool
 But it is possible to redefine this behavior by changing `DeveloperToolsOptions.Runner` value:
 
 ```csharp
-this.AttachDeveloperTools(new DeveloperToolsOptions
+this.AttachDeveloperTools(o =>
 {
-    Runner = DeveloperToolsOptions.DotNetTool
+    o.Runner = DeveloperToolsOptions.DotNetTool;
 });
 ```
 
@@ -43,9 +43,9 @@ Possible options are:
 By default, HTTP is used on all platforms.
 
 ```csharp
-this.AttachDeveloperTools(new DeveloperToolsOptions
+this.AttachDeveloperTools(o =>
 {
-    Protocol = DeveloperToolsProtocol.DefaultHttp
+    o.Protocol = DeveloperToolsProtocol.DefaultHttp;
 });
 ```
 
@@ -78,6 +78,7 @@ By default, `Developer Tools` will listen only to Avalonia logs and display them
 
 This behavior can be redefined with options:
 
-1. `DevToolsLoggerCollector.WithAvaloniaLogs()` - default.
-2. `DevToolsLoggerCollection.WithMicrosoftLogger(ILoggerFactory, LogLevel)` - allows to connect devtools as a logger provider to Microsoft `ILoggerFactory`.
-3. `DevToolsLoggerCollection.WithLoggerObservable` - custom `ILoggerObservable` interface implementation. Use this option, if you want DevTools to display your third party logs provider like Serilog.
+1. `DeveloperToolsOptions.AddAvaloniaLoggerObservable()` - enabled by default.
+2. `DeveloperToolsOptions.AddMicrosoftLoggerObservable(ILoggerFactory, LogLevel)` - allows to connect devtools as a logger provider to Microsoft `ILoggerFactory`.
+3. `DeveloperToolsOptions.AddLoggerObservable(ILoggerObservable)` - custom `ILoggerObservable` interface implementation. Use this option, if you want DevTools to display your third party logs provider like Serilog.
+4. `DeveloperToolsOptions.ClearLoggerObservables()` - clear all observables.

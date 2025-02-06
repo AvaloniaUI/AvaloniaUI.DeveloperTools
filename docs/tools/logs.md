@@ -30,13 +30,9 @@ public override void Initialize()
         .SetMinimumLevel(LogLevel.Information)
         .AddConsole());
 
-    this.AttachDeveloperTools(new DeveloperToolsOptions
+    this.AttachDeveloperTools(o =>
     {
-        LoggerCollector = DevToolsLoggerCollector.Empty()
-            // Keep Avalonia logs.
-            .WithAvaloniaLogs()
-            // But enable Microsoft Logger.
-            .WithMicrosoftLogger(loggerFactory)
+        o.AddMicrosoftLoggerObservable(loggerFactory);
     });
 
     Logger = loggerFactory.CreateLogger<Application>();
@@ -123,11 +119,9 @@ public override void Initialize()
         .WriteTo.Sink(sink)
         .CreateLogger();
 
-    this.AttachDeveloperTools(new DeveloperToolsOptions
+    this.AttachDeveloperTools(o =>
     {
-        LoggerCollector = DevToolsLoggerCollector.Empty()
-            .WithAvaloniaLogs()
-            .WithLoggerObservable(sink)
+        o.AddLoggerObservable(sink);
     });
 }
 ```
