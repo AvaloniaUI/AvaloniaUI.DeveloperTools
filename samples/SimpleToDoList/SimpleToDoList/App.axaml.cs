@@ -15,6 +15,8 @@ public partial class App : Application
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
+
+        this.AttachDeveloperTools();
     }
 
     // This is a reference to our MainViewModel which we use to save the list on shutdown. You can also use Dependency Injection 
@@ -36,7 +38,7 @@ public partial class App : Application
         }
 
         base.OnFrameworkInitializationCompleted();
-        
+
         // Init the MainViewModel 
         await InitMainViewModelAsync();
     }
