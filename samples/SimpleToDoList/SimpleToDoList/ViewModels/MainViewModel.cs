@@ -42,6 +42,7 @@ public partial class MainViewModel : ViewModelBase
     {
         // Add a new item to the list
         ToDoItems.Add(new ToDoItemViewModel() {Content = NewItemContent});
+        App.Logger?.Information("Item added: {Content}", NewItemContent);
         
         // reset the NewItemContent
         NewItemContent = null;
@@ -70,5 +71,6 @@ public partial class MainViewModel : ViewModelBase
     {
         // Remove the given item from the list
         ToDoItems.Remove(item);
+        App.Logger?.Information("Item removed: {Content}", item.Content);
     }
 }

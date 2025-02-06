@@ -16,5 +16,6 @@
         <PackageReference Include="Avalonia.Fonts.Inter" />
         <PackageReference Include="CommunityToolkit.Mvvm" />
         <PackageReference Include="AvaloniaUI.DiagnosticsSupport.Avalonia" />
+        <PackageReference Include="serilog" />
     </ItemGroup>
 </Project>

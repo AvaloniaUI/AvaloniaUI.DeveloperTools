@@ -15,8 +15,8 @@ public static class ToDoListFileService
     // This is a hard coded path to the file. It may not be available on every platform. In your real world App you may 
     // want to make this configurable
     private static string _jsonFileName = 
-        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-        "Avalonia.SimpleToDoList", "MyToDoList.txt");
+        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+        "AvaloniaUI", "Avalonia.SimpleToDoList", "MyToDoList.txt");
 
     /// <summary>
     /// Stores the given items into a file on disc

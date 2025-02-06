@@ -4,6 +4,9 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
+using AvaloniaUI.DiagnosticsSupport;
+using Serilog;
+using Serilog.Core;
 using SimpleToDoList.Services;
 using SimpleToDoList.ViewModels;
 using SimpleToDoList.Views;
@@ -12,11 +15,23 @@ namespace SimpleToDoList;
 
 public partial class App : Application
 {
+    public static Logger? Logger { get; private set; }
+
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
 
-        this.AttachDeveloperTools();
+        var sink = new DevToolsSerilogSink();
+
+        Logger = new LoggerConfiguration()
+            .MinimumLevel.Information()
+            .WriteTo.Sink(sink)
+            .CreateLogger();
+
+        this.AttachDeveloperTools(o =>
+        {
+            o.AddLoggerObservable(sink);
+        });
     }
 
     // This is a reference to our MainViewModel which we use to save the list on shutdown. You can also use Dependency Injection 
