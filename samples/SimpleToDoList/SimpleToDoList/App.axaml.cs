@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
@@ -30,6 +31,7 @@ public partial class App : Application
         this.AttachDeveloperTools(o =>
         {
             o.AddLoggerObservable(sink);
+            o.ConnectOnStartup = Design.IsDesignMode;
         });
     }
 

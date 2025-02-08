@@ -14,3 +14,5 @@
 - - [Events](./tools/events.md)
 - - [Breakpoints](./tools/breakpoints.md)
 - - [Metrics](./tools/metrics.md)
+- Advanced
+- - [Attaching to Previewer](./advanced/attaching-to-previewer.md)

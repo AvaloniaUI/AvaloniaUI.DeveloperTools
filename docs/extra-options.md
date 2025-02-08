@@ -59,12 +59,13 @@ Possible options are:
 ## DeveloperToolsOptions.DiagnosticLogger
 
 Defines sink to which all `AvaloniaUI.DiagnosticsSupport` logs are written to.
-By default is null and no `Diagnostics Support` logs are written.
+By default, this option is set to `AvaloniaDiagnosticLogger`, redirecting logs to `Avalonia.Logger.TryGet`.
 
 Possible options are:
 
 1. `DiagnosticLogger.CreateConsole(LogEntryVerbosity)`
-2. Any user implementation of `DiagnosticLogger` abstract interface.
+2. `DiagnosticLogger.CreateDebug(LogEntryVerbosity)`
+3. Any user implementation of `DiagnosticLogger` abstract interface.
 
 :::note
 To learn more about `Developer Tools` logging, please read [Reporting Issue](./reporing-issue.md) page.
