@@ -15,4 +15,5 @@
 - - [Breakpoints](./tools/breakpoints.md)
 - - [Metrics](./tools/metrics.md)
 - Advanced
-- - [Attaching to Previewer](./advanced/attaching-to-previewer.md)
+- - [Attaching to the Previewer](./advanced/attaching-to-the-previewer.md)
+- - [Attaching WSL2 application](./advanced/attaching-wsl.md)

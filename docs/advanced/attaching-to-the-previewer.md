@@ -1,4 +1,4 @@
-# Attaching to a Previewer
+# Attaching to the Previewer
 
 :::warning
 
@@ -11,6 +11,8 @@ Experimental.
 Yet, these extensions are limited in diagnostic features, making it harder to analyze visual trees and actual control placements.
 
 With `Developer Tools` running out-of-process, it is now possible to attach previewing app to the tool.
+
+![Example of DevTools app attached to the previewer process](../assets/attaching-to-previewer.png)
 
 ## Configuration
 
@@ -26,8 +28,6 @@ this.AttachDeveloperTools(o =>
 By default, `DeveloperToolsOptions.Runner` is disabled in `IsDesignMode`. It was done to avoid unnecessary noise and processes opening each time any XAML file is opened.
 
 Instead, just like on browser or mobile, `Developer Tools` app should be opened independently.
-
-![Example of DevTools app attached to the previewer process](../assets/attaching-to-previewer.png)
 
 ## Troubleshooting
 
