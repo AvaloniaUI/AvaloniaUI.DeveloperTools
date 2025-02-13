@@ -1,5 +1,11 @@
 # Getting Started
 
+:::note
+
+You can find pre-setup demo project by [AvaloniaUI/AvaloniaUI.DeveloperTools/samples/SimpleToDoList](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/tree/main/samples/SimpleToDoList#simpletodolist).
+
+:::
+
 ## Step 1: Prepare NuGet feed
 
 Avalonia Accelerate packages are distributed via a special NuGet feed that can be accessed with your AvaloniaUI portal credentials.
@@ -25,10 +31,6 @@ Or you can do it manually by creating a NuGet.config file at the root of your so
 ```
 
 Where `<YOUR_PORTAL_USERNAME>` is username for `https://portal.avaloniaui.net/` and `<YOUR_PORTAL_LICENSE_KEY>` is a license key that was received after completing seat purchase.
-
-:::note
-Early Access customer should specify "protest" as a user name, and using license key provided by AvaloniaUI team.
-:::
 
 :::note
 This NuGet Feed can also be configured globally, by modifying common NuGet.Config that can be found by following [Common NuGet configurations](https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior).
