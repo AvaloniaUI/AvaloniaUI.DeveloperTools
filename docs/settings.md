@@ -9,6 +9,7 @@
 | | Enable Protocol Monitor | Shows diagnostic communication protocol monitoring window | false |
 | **Elements Tree** |
 | | Aggregate Templates | Combines template visual children into a single tree node for cleaner visualization, collapsed by default | true |
+| | InlinePseudoclasses | By default, only visible element pseudoclasses are right-aligned in the tree, and the rest is hidden in the overlay button. This settings allows to inline all pseudoclasses regardless of their visibility. | false |
 | | Contextual Properties | Only shows properties relevant to the current context/state of the selected element. For example, `Grid.Row` property only visible on direct `Grid` children | true |
 | | Include CLR Properties | Displays .NET CLR properties in addition to Avalonia-specific properties, excluding duplicates | false |
 | **Overlay** |

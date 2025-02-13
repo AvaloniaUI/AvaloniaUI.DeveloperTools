@@ -17,3 +17,4 @@
 - Advanced
 - - [Attaching to the Previewer](./advanced/attaching-to-the-previewer.md)
 - - [Attaching WSL2 application](./advanced/attaching-wsl.md)
+- - [Attaching to the remote tool](./advanced/attaching-to-the-remote-tool.md)
