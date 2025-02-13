@@ -102,8 +102,6 @@ When your target app is running, press F12 to initialize connection.
 `Diagnostics Support` will automatically run `Developer Tools` executable and initiate connection between processes.
 Initial `MacOS` execution might take longer due to Gatekeeper validation. Following executions should be instant.
 
-Once `Developer Tools` opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to purchase and license the tool. This is the only time when tool requires internet connection. After that tool can be used offline or until license key session expires.
-
 :::note
 
 Since Browser/Mobile projects can't run `Developer Tools` executable, you need to run the tool manually before connecting it to your app.
@@ -114,3 +112,15 @@ avdt
 ```
 
 :::
+
+## Step 6: Activate the tool
+
+Once `Developer Tools` opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to purchase and license the tool. This is the only time when tool requires internet connection. After that tool can be used offline or until license key session expires.
+
+<img width="418" alt="Screenshot 2025-02-13 at 3 50 03 AM" src="https://github.com/user-attachments/assets/d1c47c0a-f891-4cdb-8ec9-44ca4b65928f" />
+
+## Step 7: Done!
+
+After activation, connection with the app will be resumed, and main Developer Tools window will be opened. 
+
+You can read more about tools and features on this documentation.
