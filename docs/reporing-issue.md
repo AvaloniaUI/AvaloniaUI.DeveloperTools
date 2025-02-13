@@ -31,7 +31,7 @@ Linux:
 MacOS:
 
 ```
-/Library/Application Support/AvaloniaUI/com.AvaloniaUI.Net.DeveloperTools/Logs/
+~/Library/Application Support/AvaloniaUI/com.AvaloniaUI.Net.DeveloperTools/Logs/
 ```
 
 ## Obtaining Diagnostics Support logs
