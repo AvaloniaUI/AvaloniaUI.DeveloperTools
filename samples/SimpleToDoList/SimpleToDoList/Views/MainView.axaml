@@ -14,7 +14,7 @@
     </Design.DataContext>
 
     <!-- We give a name to the root grid in order to access it later -->
-    <Grid RowDefinitions="Auto, *, Auto"
+    <Grid RowDefinitions="Auto, *, Auto, Auto"
           x:Name="Root">
 
         <!-- This is our title text block. We use Style.Classes to style it accordingly -->
@@ -47,8 +47,17 @@
             </ItemsControl>
         </ScrollViewer>
 
+        <TextBlock Grid.Row="2" Margin="0,0,0,10">
+            <TextBlock.Text>
+                <MultiBinding StringFormat="Statu a asdfsdfs: {0} total items, {1} completed">
+                    <Binding Path="ToDoItems.Count"/>
+                    <Binding Path="TotalCompleted"/>
+                </MultiBinding>
+            </TextBlock.Text>
+        </TextBlock>
+
         <!-- This TextBox can be used to add new ToDoItems -->
-        <TextBox Grid.Row="2"
+        <TextBox Grid.Row="3"
                  Text="{Binding NewItemContent}"
                  Watermark="Add a new Item">
             <TextBox.InnerRightContent>

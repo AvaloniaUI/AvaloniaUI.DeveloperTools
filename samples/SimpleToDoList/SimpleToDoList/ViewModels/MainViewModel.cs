@@ -1,5 +1,10 @@
 ﻿using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using Avalonia.Collections;
 using Avalonia.Controls;
+using Avalonia.Reactive;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using SimpleToDoList.Models;
@@ -12,6 +17,8 @@ namespace SimpleToDoList.ViewModels;
 /// </summary>
 public partial class MainViewModel : ViewModelBase
 {
+    private string? _newItemContent;
+
     public MainViewModel()
     {
         // We can use this to add some items for the designer. 
@@ -24,14 +31,19 @@ public partial class MainViewModel : ViewModelBase
                 new ToDoItemViewModel() { Content = "Avalonia", IsChecked = true}
             });
         }
+
+        ToDoItems.GetWeakCollectionChangedObservable()
+            .Subscribe(new AnonymousObserver<NotifyCollectionChangedEventArgs>(_ =>
+                OnPropertyChanged(nameof(TotalCompleted))));
     }
-    
+
     /// <summary>
     /// Gets a collection of <see cref="ToDoItem"/> which allows adding and removing items
     /// </summary>
     public ObservableCollection<ToDoItemViewModel> ToDoItems { get; } = new ObservableCollection<ToDoItemViewModel>();
 
-    
+    public int TotalCompleted => ToDoItems.Count(i => i.IsChecked);
+
     // -- Adding new Items --
     
     /// <summary>
@@ -48,12 +60,21 @@ public partial class MainViewModel : ViewModelBase
         NewItemContent = null;
     }
 
-    /// <summary>
-    /// Gets or set the content for new Items to add. If this string is not empty, the AddItemCommand will be enabled automatically
-    /// </summary>
-    [ObservableProperty] 
-    [NotifyCanExecuteChangedFor(nameof(AddItemCommand))] // This attribute will invalidate the command each time this property changes
-    private string? _newItemContent;
+    [Required]
+    [MaxLength(100)]
+    [MinLength(1)]
+    public string? NewItemContent
+    {
+        get => _newItemContent;
+        set
+        {
+            if (_newItemContent != value)
+            {
+                base.SetProperty(ref _newItemContent, value);
+                AddItemCommand.NotifyCanExecuteChanged();
+            }
+        }
+    }
 
     /// <summary>
     /// Returns if a new Item can be added. We require to have the NewItem some Text

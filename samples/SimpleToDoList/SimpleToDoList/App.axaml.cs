@@ -38,10 +38,10 @@ public partial class App : Application
     // This is a reference to our MainViewModel which we use to save the list on shutdown. You can also use Dependency Injection 
     // in your App.
     private readonly MainViewModel _mainViewModel = new MainViewModel();
-    
+
     public override async void OnFrameworkInitializationCompleted()
     {
-        BindingPlugins.DataValidators.RemoveAt(0);
+        //BindingPlugins.DataValidators.RemoveAt(0);
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
