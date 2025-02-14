@@ -13,7 +13,7 @@ Documentation is temporary private and hosted on [AvaloniaUI/AvaloniaUI.Develope
 ## Setup Changes
 
 Early Access users will receive following credentials:
-- NuGet feed username and password. Where login is used as `<YOUR_PORTAL_USERNAME>` and password as `<YOUR_PORTAL_LICENSE_KEY>` from [Step 1: Prepare NuGet feed](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/blob/main/docs/getting-started.md#step-1-prepare-nuget-feed)
+- NuGet feed username and password. Where login is used as `<YOUR_PORTAL_USERNAME>` and password as `<YOUR_PORTAL_LICENSE_KEY>` from [Step 1: Configure NuGet Package Source](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/blob/main/docs/getting-started.md#step-1-prepare-nuget-feed)
 - Developer Tools username and license key. License key is used instead of password in the tool activation window.
 
 These credentials are limited by the duration of early access.
@@ -26,7 +26,7 @@ The application has completed its feature development phase and entered stabiliz
 
 Documentation development is ongoing, with focus on advanced scenarios and tool capabilities.
 
-Future post-release features are tracked here: [DeveloperTools/issues#Features](link)
+Future post-release features are tracked here: [DeveloperTools/issues#Features](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/issues?q=is%3Aissue%20state%3Aopen%20type%3AFeature).
 
 ## Providing Feedback
 
