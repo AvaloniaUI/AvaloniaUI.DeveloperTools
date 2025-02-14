@@ -1,18 +1,18 @@
-# Reference to custom DeveloperToolsOptions
+# Reference to DeveloperToolsOptions
 
 ## DeveloperToolsOptions.Gesture
 
-Defines gesture to run and connect to the `Developer Tools` process.
+Defines the gesture to run and connect to the `Developer Tools` process.
 By default: `F12`.
 
 ## DeveloperToolsOptions.ApplicationName
 
-Defines is app should be connected to dev tools on startup.
+Optional application display name.
 If unset, `Application.Name` or entry assembly name is used.
 
 ## DeveloperToolsOptions.ConnectOnStartup
 
-Optional application display name.
+Defines if the app should be connected to dev tools on startup.
 By default: false.
 
 ## DeveloperToolsOptions.Runner
@@ -31,16 +31,14 @@ this.AttachDeveloperTools(o =>
 Possible options are:
 
 1. `DeveloperToolsOptions.DotNetTool` - global .NET tool.
-2. `DeveloperToolsOptions.AppleBundle` - runs macOS bundle by its ID. To make it work, you need to run Developer Tools process directly at least once.
-3. `DeveloperToolsOptions.NoOp` - do nothing. It's only supported option on Mobile and Browser platforms.
-4. `DeveloperToolsRunner.CreateFromExecutable(string)` - run executable by full path. This option is preferred, when you install .NET tool locally.
-5. `DeveloperToolsRunner.GetDefaultForPlatform()` - returns `DotNetTool` on desktop or `NoOp` on mobile/browser.
+2. `DeveloperToolsOptions.AppleBundle` - runs macOS bundle by its ID. To make it work, you need to run `Developer Tools` process directly at least once.
+3. `DeveloperToolsOptions.NoOp` - do nothing. This option assumes the `Developer Tools` application was started by user manually. 
+4. `DeveloperToolsRunner.CreateFromExecutable(string)` - run executable by full path. This option is not recommended, unless you prefer a custom installation of the tool.
+5. Default: `DeveloperToolsRunner.GetDefaultForPlatform()` - returns `DotNetTool` on desktop or `NoOp` on mobile/browser.
 
 ## DeveloperToolsOptions.Protocol
 
 `DiagnosticsSupport` uses one of two transport protocols to communicate between user app and `Developer Tools` process: HTTP and Named Pipes.
-
-By default, HTTP is used on all platforms.
 
 ```csharp
 this.AttachDeveloperTools(o =>
@@ -52,9 +50,10 @@ this.AttachDeveloperTools(o =>
 Possible options are:
 
 1. `DeveloperToolsProtocol.DefaultHttp` - default HTTP connection on `29414` port and 5 seconds connection timeout.
-2. `DeveloperToolsProtocol.CreateHttp(Uri, TimeSpan)` - creates HTTP connection with provided parameters. Note: you need to reconfigure Developer Tools listener port independently by following [Settings page](./settings.md).
-3. `DeveloperToolsProtocol.CreateNamedPipe(string)` - creates Named Pipe connection. This option is only compatible with Desktop platforms and might be preferred if there are connectivity issues on the local machine. Named Pipe name will be automatically passed to the `Developer Tools` instance.
-4. `DeveloperToolsProtocol.GetDefaultForPlatform()` - returns `DefaultHttp` on all platforms.
+2. `DeveloperToolsProtocol.CreateHttp(Uri, TimeSpan)` - creates HTTP connection with provided parameters. Note: you need to reconfigure `Developer Tools` listener port independently by following [Settings page](./settings.md).
+3. `DeveloperToolsProtocol.CreateHttp(IpAddress, int? port, TimeSpan)` - creates HTTP connection with provided parameters. When port is unset, default `29414` is used. 
+4. `DeveloperToolsProtocol.CreateNamedPipe(string)` - creates Named Pipe connection. This option is only compatible with Desktop platforms and might be preferred if there are connectivity issues on the local machine. Named Pipe name will be automatically passed to the `Developer Tools` instance.
+5Default: `DeveloperToolsProtocol.GetDefaultForPlatform()` - currently returns `DefaultHttp` on all platforms.
 
 ## DeveloperToolsOptions.DiagnosticLogger
 
@@ -63,8 +62,8 @@ By default, this option is set to `AvaloniaDiagnosticLogger`, redirecting logs t
 
 Possible options are:
 
-1. `DiagnosticLogger.CreateConsole(LogEntryVerbosity)`
-2. `DiagnosticLogger.CreateDebug(LogEntryVerbosity)`
+1. `DiagnosticLogger.CreateConsole(LogEntryVerbosity)`.
+2. `DiagnosticLogger.CreateDebug(LogEntryVerbosity)`.
 3. Any user implementation of `DiagnosticLogger` abstract interface.
 
 :::note
@@ -73,7 +72,7 @@ To learn more about `Developer Tools` logging, please read [Reporting Issue](./r
 
 ## DeveloperToolsOptions.LoggerCollector
 
-Defines collector which listens for logs to be displayed in Developer Tools.
+Defines collector which listens for logs to be displayed in `Developer Tools`.
 
 By default, `Developer Tools` will listen only to Avalonia logs and display them in the [Logger tools](./tools/logs.md).
 

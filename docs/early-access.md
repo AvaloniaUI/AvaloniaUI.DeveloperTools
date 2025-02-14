@@ -35,4 +35,4 @@ Currently, the most important questions we as developers have are:
 
 ## Reporting issues/bugs
 
-Please refer to [Reporting issues](reporing-issue.md).
+Please refer to [Reporting issues](./reporting-issues.md).

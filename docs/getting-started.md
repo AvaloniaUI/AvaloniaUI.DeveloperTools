@@ -1,17 +1,36 @@
 # Getting Started
 
+## Prerequisites
+
+### `Developer Tools` requirements
+
+| Requirement | Version/Details |
+|------------|-----------------|
+| .NET Runtime | 6.0 or newer |
+| Windows | 10 or newer |
+| macOS | 13 or newer |
+| Linux | X11 and glibc 2.27 or musl 1.22.2 compatible distros |
+
+No admin/sudo permissions are required to run the tool. Firewall exception might need to be configured, if you plan to use `Developer Tools` remotely.  
+
+### `Diagnostics Support` requirements
+
+Support package requires **Avalonia 11.2.0** or newer, and built on **.NET Standard 2.0** compatible APIs.
+
+This package is compatible with Browser and Android/iOS projects.
+
 :::note
 
-You can find pre-setup demo project by [AvaloniaUI/AvaloniaUI.DeveloperTools/samples/SimpleToDoList](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/tree/main/samples/SimpleToDoList#simpletodolist).
+Demo project with `Developer Tools` preconfigured can be found at [AvaloniaUI/AvaloniaUI.DeveloperTools/samples/SimpleToDoList](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/tree/main/samples/SimpleToDoList#simpletodolist).
 
 :::
 
-## Step 1: Prepare NuGet feed
+## Step 1: Configure NuGet Package Source
 
-Avalonia Accelerate packages are distributed via a special NuGet feed that can be accessed with your AvaloniaUI portal credentials.
+Avalonia Accelerate packages are distributed via a dedicated NuGet feed that can be accessed with your AvaloniaUI portal credentials.
 
-You can use Visual Studio documentation on how to add custom NuGet feed: [Install NuGet packages with Visual Studio](https://learn.microsoft.com/en-us/azure/devops/artifacts/nuget/consume?view=azure-devops&tabs=windows).
-Or you can do it manually by creating a NuGet.config file at the root of your solution, or modify an existing one to contain the following:
+Refer to Visual Studio documentation on how to add custom NuGet feed: [Install NuGet packages with Visual Studio](https://learn.microsoft.com/en-us/azure/devops/artifacts/nuget/consume?view=azure-devops&tabs=windows).
+Or manually create a NuGet.config file at the root of your solution, or modify an existing one to contain the following:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -36,10 +55,10 @@ Where `<YOUR_PORTAL_USERNAME>` is username for `https://portal.avaloniaui.net/` 
 This NuGet Feed can also be configured globally, by modifying common NuGet.Config that can be found by following [Common NuGet configurations](https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior).
 :::
 
-## Step 2: Installing AvaloniaUI DeveloperTools .NET tool
+## Step 2: Installing AvaloniaUI Developer Tools
 
-AvaloniaUI DeveloperTools is currently distributed and updated via .NET tool mechanism.
-By default, this tools should be installed only globally. For locally installed tool your also need to redefine `Diagnostics Support` runner by following [Extra Options](./extra-options.md) pages.
+`AvaloniaUI Developer Tools` is currently a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with update mechanism provided by the SDK.
+This guide demonstrates global installation of the tool. But local installation is possible with a limitation: this tool will only work from the same working directory or descendant as tool installation solution/project.    
 
 For macOS:
 
@@ -59,14 +78,14 @@ For Linux:
 dotnet tool install --global AvaloniaUI.DeveloperTools.Linux --version "1.0.0-*"
 ```
 
-When new version is released, Developer Tools will show notifications about new release.
-It can be then installed via similar `dotnet tool update` command.
+The `Developer Tools` will notify you when a new version is available.
+It can be then updated via similar `dotnet tool update` command.
 
 ## Step 3: Installing Diagnostics Support package
 
-`Diagnostics Support` package is responsible for establishment a connection bridge between user app and Developer Tools process.
+The `Diagnostics Support` package is responsible for establishment a connection bridge between user app and `Developer Tools` process.
 
-This package can be installed either in the executable project with your Program AppBuilder or shared project with your Application, depending on your preferences and app architecture. This package is also compatible with Browser and Mobile projects.
+This package can be installed either in the executable project with your Program AppBuilder or shared project with your Application, depending on your application's architecture.
 
 In both cases, command is the same:
 
@@ -74,14 +93,9 @@ In both cases, command is the same:
 dotnet add package AvaloniaUI.DiagnosticsSupport.Avalonia --version "1.0.0-*"
 ```
 
-:::note
-`Diagnostics Support` package is compatible with .NET 6 and Avalonia 11.2.3 or newer.
-We plan to lower Avalonia support to 11.1.x.
-:::
-
 ## Step 4: Configuring your project
 
-Once `DiagnosticsSupport` package is installed, you need to enable it in your `Application` class:
+Once the `DiagnosticsSupport` package is installed, you need to enable it in your `Application` class:
 
 ```csharp
 public override void Initialize()
@@ -94,13 +108,15 @@ public override void Initialize()
 
 Alternatively, it's possible to use `.WithDeveloperTools()` extension method on your AppBuilder.
 
-These methods also accept `DeveloperToolsOptions` options class allowing to customize `Diagnostics Support` setup. See [Extra Options](./extra-options.md) for more details.
+These methods also accept `DeveloperToolsOptions` options class allowing to customize `Diagnostics Support` setup. See [Reference to DeveloperToolsOptions](./advanced/options-reference.md) for more details.
+
+By default, **29414** is used and should be available. It is configurable via options.
 
 ## Step 5: Run the tool
 
 When your target app is running, press F12 to initialize connection.
 `Diagnostics Support` will automatically run `Developer Tools` executable and initiate connection between processes.
-Initial `MacOS` execution might take longer due to Gatekeeper validation. Following executions should be instant.
+Initial execution on `macOS` might take several seconds due to Gatekeeper validation. Subsequent launches will be faster.
 
 :::note
 
@@ -117,10 +133,15 @@ avdt
 
 Once `Developer Tools` opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to purchase and license the tool. This is the only time when tool requires internet connection. After that tool can be used offline or until license key session expires.
 
-<img width="418" alt="Screenshot 2025-02-13 at 3 50 03 AM" src="https://github.com/user-attachments/assets/d1c47c0a-f891-4cdb-8ec9-44ca4b65928f" />
+![Tool Activation](./assets/tool-activation.png)
 
 ## Step 7: Done!
 
-After activation, connection with the app will be resumed, and main Developer Tools window will be opened. 
+After activation, the connection with the app will be resumed, and window with tools will be opened. 
 
-You can read more about tools and features on this documentation.
+## Further Reading
+
+- Documentation on [Elements tool](./tools/elements)
+- Custom [DeveloperToolsOptions configuration](./advanced/options-reference.md) reference
+- [Frequently Asked Questions](./faq)
+- [Settings](./settings.md) and [Shortcuts](./shortcuts.md) documentation

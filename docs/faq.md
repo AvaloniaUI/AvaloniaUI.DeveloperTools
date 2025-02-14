@@ -17,6 +17,14 @@ Yes. DiagnosticsPackage is fully trimming friendly. Even though it does use refl
 
 No, it's not.
 
+## Are arm64 and x86 builds of the tool available or planned?
+
+Only **x64** builds for Windows, macOS and Linux are available at the moment. Where **arm64** is supported via platform emulation.
+
+We have plans to eventually release native **arm64** builds.
+
+No **x86** builds are available nor planned.
+
 ## I have another question. Where can I ask it?
 
 Feel free to leave your questions or other feedback on [AvaloniaUI/AvaloniaUI.DeveloperTools](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/ ) repository.
