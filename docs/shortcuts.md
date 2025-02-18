@@ -40,7 +40,7 @@
 | Open Elements | Opens the Elements inspection tool for viewing UI elements. | Unassigned | Unassigned |
 | Open Assets | Opens the Assets browser for managing application assets. | Unassigned | Unassigned |
 | Open Resources | Opens the Resources browser for viewing resource files. | Unassigned | Unassigned |
-| Open Settings | Opens the Developer Tools settings. | Unassigned | Unassigned |
+| Open Settings | Opens the Developer Tools settings. | Unassigned | Cmd+. |
 | Open Logs | Opens the application logs viewer. | Unassigned | Unassigned |
 | Open Events | Opens the events monitoring tool for tracking UI events. | Unassigned | Unassigned |
 | Open Breakpoints | Opens the breakpoints management tool for debugging. | Unassigned | Unassigned |
