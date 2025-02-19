@@ -15,7 +15,7 @@
         <PackageVersion Include="Avalonia.Browser" Version="11.2.3" />
         <PackageVersion Include="Avalonia.Android" Version="11.2.3" />
 
-        <PackageVersion Include="AvaloniaUI.DiagnosticsSupport.Avalonia" Version="1.0.0-beta3.4" />
+        <PackageVersion Include="AvaloniaUI.DiagnosticsSupport.Avalonia" Version="1.0.0-beta3.5" />
 
         <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.3.2" />
 
