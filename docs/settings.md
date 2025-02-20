@@ -20,6 +20,9 @@
 | **Events** |
 | | Default Routed Events | List of events to track by default in the events tool | `Button.ClickEvent`, `InputElement.KeyDownEvent`, `InputElement.KeyUpEvent`, `InputElement.TextInputEvent`, `InputElement.PointerReleasedEvent`, `InputElement.PointerPressedEvent` |
 | **Metrics** |
-| | Additional Performance Meters | List of performance counters to monitor in the metrics tool | `Avalonia` (11.3.0+), `System.Runtime`, `System.Net.Http` |
+| | Observable meters polling interval (ms) | How frequently observable meters are polled for new values. Lower values provide more frequent updates but may impact the connected app's performance. | 1000ms |
+| | Measurements frame interval (ms) | How frequently metrics measurements are captured and updated in the visualization. | 250ms |
+| | Aggregate frame measurements | When enabled, combines multiple measurements within the same frame: averages time-based metrics and uses latest values for counters and gauges. When disabled, keeps all raw measurements. | true |
+| | Measurements history duration (s) | Defines how long in the past measurements are kept and displayed. | 60s |
 | **Protocol** |
 | | HTTP port | Defines HTTP port used to listen for app connections. Requires restart on change. Needs to be in-sync with `DeveloperToolsOptions.Protocol` set-up in the target app. | 29414 |

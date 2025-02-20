@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using Avalonia.Collections;
 using Avalonia.Controls;
@@ -17,6 +18,9 @@ namespace SimpleToDoList.ViewModels;
 /// </summary>
 public partial class MainViewModel : ViewModelBase
 {
+    private static Meter s_meter = new Meter("SimpleToDoList");
+    private static UpDownCounter<int> s_tasksCount = s_meter.CreateUpDownCounter<int>("tasks.count");
+
     private string? _newItemContent;
 
     public MainViewModel()
@@ -58,6 +62,7 @@ public partial class MainViewModel : ViewModelBase
         
         // reset the NewItemContent
         NewItemContent = null;
+        s_tasksCount.Add(1);
     }
 
     [Required]
@@ -93,5 +98,6 @@ public partial class MainViewModel : ViewModelBase
         // Remove the given item from the list
         ToDoItems.Remove(item);
         App.Logger?.Information("Item removed: {Content}", item.Content);
+        s_tasksCount.Add(-1);
     }
 }
