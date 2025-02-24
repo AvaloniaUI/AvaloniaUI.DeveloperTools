@@ -26,7 +26,7 @@
 
 | Display Name | Description | Windows/Linux | macOS |
 |--------------|-------------|---------------|-------|
-| Refresh Current View | Refreshes the current view. | F5 | F5 |
+| Refresh Current View | Refreshes the current view. | F5 | Cmd+Shift+R  |
 | Remove Item | Removes selected item from the current list or view. | Delete | Delete |
 | Clear Current List | Clears items from the current list or view. | Ctrl+L | Cmd+L |
 | Show Navigation | Shows or hides the navigation panel. | Alt+1 | Option+1 |
@@ -46,4 +46,4 @@
 | Open Breakpoints | Opens the breakpoints management tool for debugging. | Unassigned | Unassigned |
 | Open Metrics | Opens the performance metrics viewer for monitoring application performance. | Unassigned | Unassigned |
 | Open Protocol | Opens the Developer Tools protocol monitoring tool. | Unassigned | Unassigned |
-| Open Documentation | Opens the Developer Tools documentation. | Ctrl+F1 | Cmd+F1 |
+| Open Documentation | Opens the Developer Tools documentation. | Ctrl+F1 | Cmd+? |
