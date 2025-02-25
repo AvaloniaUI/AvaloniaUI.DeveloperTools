@@ -63,19 +63,19 @@ This guide demonstrates global installation of the tool. But local installation 
 For macOS:
 
 ```bash
-dotnet tool install --global AvaloniaUI.DeveloperTools.macOS --version "1.0.0-*"
+dotnet tool install --global AvaloniaUI.DeveloperTools.macOS --prerelease"
 ```
 
 For Windows:
 
 ```bash
-dotnet tool install --global AvaloniaUI.DeveloperTools.Windows --version "1.0.0-*"
+dotnet tool install --global AvaloniaUI.DeveloperTools.Windows --prerelease
 ```
 
 For Linux:
 
 ```bash
-dotnet tool install --global AvaloniaUI.DeveloperTools.Linux --version "1.0.0-*"
+dotnet tool install --global AvaloniaUI.DeveloperTools.Linux --prerelease
 ```
 
 The `Developer Tools` will notify you when a new version is available.
@@ -90,7 +90,7 @@ This package can be installed either in the executable project with your Program
 In both cases, command is the same:
 
 ```bash
-dotnet add package AvaloniaUI.DiagnosticsSupport.Avalonia --version "1.0.0-*"
+dotnet add package AvaloniaUI.DiagnosticsSupport.Avalonia --prerelease
 ```
 
 ## Step 4: Configuring your project
