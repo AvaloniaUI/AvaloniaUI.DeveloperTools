@@ -49,7 +49,7 @@
 
         <TextBlock Grid.Row="2" Margin="0,0,0,10">
             <TextBlock.Text>
-                <MultiBinding StringFormat="Statu a asdfsdfs: {0} total items, {1} completed">
+                <MultiBinding StringFormat="Status: {0} total items, {1} completed">
                     <Binding Path="ToDoItems.Count"/>
                     <Binding Path="TotalCompleted"/>
                 </MultiBinding>
