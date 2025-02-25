@@ -2,7 +2,7 @@
 
 `Developer Tools` reads list of all Avalonia Resources embedded in the running process.
 
-This tool also includes embedded assets from the dependencies, commonly third party themes or icon libraries these are available as avalonia resources.
+This tool also includes embedded assets from the dependencies, commonly third party themes or icon libraries these are available as Avalonia Resources.
 
 ![Assets Page](../assets/assets-page.png)
 

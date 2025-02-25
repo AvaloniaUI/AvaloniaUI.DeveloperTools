@@ -7,7 +7,7 @@ Each new connection will open a new Developer Tools window, working independentl
 
 ## Does it work with Browser/Android/iOS?
 
-It does work with mobile and browser applications. But it requires slightly different setup, mainly - Developer Tools application has to be opened manually, as it's not possible to run desktop prcesses from the sandboxed environment or mobile.
+It does work with mobile and browser applications. But it requires slightly different setup, mainly - Developer Tools application has to be opened manually, as it's not possible to run desktop processes from the sandboxed environment or mobile.
 
 ## Can I use Developer Tools and DiagnosticsPackage with NativeAOT app?
 
