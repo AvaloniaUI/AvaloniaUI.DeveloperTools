@@ -1,8 +1,8 @@
 # Application Breakpoints Tool
 
-The Application Breakpoints Tool allows developers to monitor and debug property changes and events in Avalonia applications without modifying code. Breakpoints can be set on properties, events, or specific UI elements to help diagnose issues and understand application behavior.
+The Application Breakpoints Tool allows developers to monitor and debug property changes and events in Avalonia applications without modifying code. Breakpoints can be set on properties, events to help diagnose issues and understand application behavior.
 
-A breakpoint considered to be `Hit` (and correspondingly, increment `Hit Count` value) when:
+A breakpoint considered to be `Hit` (and correspondingly, increment `Hit Count` value, or suspend execution) when:
 1. Property is changed (for property breakpoints) or event is raised (for event breakpoints).
 2. Breakpoint is enabled.
 3. If breakpoint has a target, it matches source of the property/event.
