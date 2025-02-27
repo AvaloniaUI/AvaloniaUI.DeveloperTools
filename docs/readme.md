@@ -7,8 +7,7 @@
 - [Application Shortcuts](./shortcuts.md)
 - [Application Settings](./settings.md)
 - Tools
-- - [Elements](./tools/elements.md)
-- - [Overlay](./tools/overlay.md)
+- - [Elements](./tools/elements/elements.md)
 - - [Assets](./tools/assets.md)
 - - [Resources](./tools/resources.md)
 - - [Logs](./tools/logs.md)

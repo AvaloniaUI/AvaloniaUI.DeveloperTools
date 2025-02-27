@@ -1,4 +1,4 @@
-# 3D Viewer
+# Element 3D Viewer
 
 The 3D Viewer provides a three-dimensional visualization of your application's visual tree, allowing you to explore the layering and hierarchy of UI elements in a spatial context.
 
