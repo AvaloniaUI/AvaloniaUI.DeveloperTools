@@ -33,8 +33,6 @@ The entire tree supports search functionality, allowing you to quickly locate sp
 
 ## Pseudoclasses selector
 
-Visual elements in Avalonia often respond to different states through pseudoclasses. The Elements Tool allows you to toggle these states directly in the interface.
+For each element, the tool displays pseudoclasses that were defined on it. This feature is particularly valuable for testing how elements respond to different states without having to manually trigger them through user interaction.
 
-For each visual element, the tool displays pseudoclasses that were defined at compile-time via the `[PseudoClassesAttribute]`. This feature is particularly valuable for testing how elements respond to different states without having to manually trigger them through user interaction.
-
-When developing custom controls with pseudoclasses, adding the `[PseudoClassesAttribute]` not only improves integration with the Developer Tools but also enhances IDE auto-completion support.
+When developing custom controls with pseudoclasses, adding the `[PseudoClassesAttribute]` improves integration with the Developer Tools and also enhances IDE auto-completion support.

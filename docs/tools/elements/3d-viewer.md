@@ -2,6 +2,7 @@
 
 The 3D Viewer provides a three-dimensional visualization of your application's visual tree, allowing you to explore the layering and hierarchy of UI elements in a spatial context.
 
+![3D Viewer Tab](../../assets/3d-viewer-mini-demo.gif)
 ## Accessing the 3D Viewer
 
 Open the 3D Viewer from the Developer Tools panel by toggling the "3D Viewer" button on the [Properties](./properties.md) view toolbar.
@@ -9,7 +10,11 @@ Or from "Open 3D Viewer" context menu in the [Elements](./elements.md) Tree.
 
 Any visual element subtree can be viewed. Templates and root Application cannot.
 
-![3D Viewer Tab](../../assets/3d-viewer-mini-demo.gif)
+:::note
+
+This feature requires Avalonia 11.2.0 or newer.
+
+:::
 
 ## Features
 

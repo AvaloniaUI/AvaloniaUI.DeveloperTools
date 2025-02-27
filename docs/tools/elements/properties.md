@@ -9,7 +9,7 @@ The panel displays all Avalonia properties assigned to the element. Developers c
 - Sort properties alphabetically or by value
 - Group properties by categories
 - Edit values using specialized editors (ColorPicker, BrushPicker, Image/Geometry previews)
-- Properties with nested grids are clickable, allowing to preview `DataContext` or `Image.Source`-like properties. 
+- Properties with nested grids are clickable, allowing to preview `DataContext` or `Image.Source`-like properties.
 
 ## Property Details
 
