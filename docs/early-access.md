@@ -35,7 +35,7 @@ We would appreciate your feedback on the following:
 1. How easy to follow Getting Started process is?
 2. How well does the tool work with your application? Any performance issues?
 3. What do you think about current feature set?
-4. Is there any possible reason, why would you prefer old developer tools?
+4. Is there any possible reason, why would you prefer legacy developer tools?
 5. Any problems with shortcuts? If any should be redefined or added?
 6. What do you think about dark/light color palette?
 

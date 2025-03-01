@@ -2,16 +2,24 @@
 
 ## Is it possible to connect multiple instances to the Developer Tools?
 
-Yes, while single instance of Developer Tools is running and activated, you can connect one or many apps to it.
+Yes, while a single instance of Developer Tools is running and activated, you can connect one or many apps to it.
 Each new connection will open a new Developer Tools window, working independently from each other.
 
 ## Does it work with Browser/Android/iOS?
 
-It does work with mobile and browser applications. But it requires slightly different setup, mainly - Developer Tools application has to be opened manually, as it's not possible to run desktop processes from the sandboxed environment or mobile.
+It does work with mobile and browser applications. But it requires slightly different setup, mainly - `Developer Tools` application has to be opened manually, as it's impossible to run desktop processes from the sandboxed environment or mobile.
 
 ## Can I use Developer Tools and DiagnosticsPackage with NativeAOT app?
 
 Yes. DiagnosticsPackage is fully trimming friendly. Even though it does use reflection, the tool was tested with AOT.
+
+## Is it necessary to exclude `AvaloniaUI.DiagnosticsSupport.Avalonia` package from Release/Production build?
+
+Tool can be useful for internal testing of Release builds. And it's not necessary to only include it with Debug builds.
+
+Unlikely the legacy Avalonia DevTools, this package is not shipped with heavy dependencies that might break Release compilation.
+
+But it is still advised to exclude this package on production builds for security and bundle size reasons.
 
 ## Is AvaloniaUI Developer Tools open source?
 
@@ -27,4 +35,4 @@ No **x86** builds are available nor planned.
 
 ## I have another question. Where can I ask it?
 
-Feel free to leave your questions or other feedback on [AvaloniaUI/AvaloniaUI.DeveloperTools](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/ ) repository.
+Feel free to leave your questions or feedback on [AvaloniaUI/AvaloniaUI.DeveloperTools](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/ ) repository.
