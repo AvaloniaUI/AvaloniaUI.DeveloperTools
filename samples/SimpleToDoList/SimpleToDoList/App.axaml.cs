@@ -13,7 +13,7 @@ using SimpleToDoList.Views;
 
 namespace SimpleToDoList;
 
-public partial class App : Application
+public partial class App: Application
 {
     public static Logger? Logger { get; private set; }
 
@@ -31,7 +31,7 @@ public partial class App : Application
         this.AttachDeveloperTools(o =>
         {
             o.AddLoggerObservable(sink);
-            o.ConnectOnStartup = Design.IsDesignMode;
+            o.ConnectOnStartup |= Design.IsDesignMode;
         });
     }
 

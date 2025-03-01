@@ -58,7 +58,7 @@ This NuGet Feed can also be configured globally, by modifying common NuGet.Confi
 ## Step 2: Installing AvaloniaUI Developer Tools
 
 `AvaloniaUI Developer Tools` is currently a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with update mechanism provided by the SDK.
-This guide demonstrates global installation of the tool. But local installation is possible with a limitation: this tool will only work from the same working directory or descendant as tool installation solution/project.    
+This guide demonstrates global installation of the tool. But local installation is possible with a limitation: this tool will only work from the same working directory or descendant as the tool installation solution/project.    
 
 For macOS:
 
@@ -83,7 +83,7 @@ It can be then updated via similar `dotnet tool update` command.
 
 ## Step 3: Installing Diagnostics Support package
 
-The `Diagnostics Support` package is responsible for establishment a connection bridge between user app and `Developer Tools` process.
+The `Diagnostics Support` package is responsible for establishing a connection bridge between the user app and `Developer Tools` process.
 
 This package can be installed either in the executable project with your Program AppBuilder or shared project with your Application, depending on your application's architecture.
 
@@ -118,26 +118,15 @@ When your target app is running, press F12 to initialize connection.
 `Diagnostics Support` will automatically run `Developer Tools` executable and initiate connection between processes.
 Initial execution on `macOS` might take several seconds due to Gatekeeper validation. Subsequent launches will be faster.
 
-:::note
-
-Since Browser/Mobile projects can't run `Developer Tools` executable, you need to run the tool manually before connecting it to your app.
-With default installation, you only need to run a single command:
-
-```
-avdt
-```
-
-:::
-
 ## Step 6: Activate the tool
 
-Once `Developer Tools` opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to purchase and license the tool. This is the only time when tool requires internet connection. After that tool can be used offline or until license key session expires.
+Once `Developer Tools` opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to purchase and license the tool. This is the only time when the tool requires an internet connection. After that, the tool can be used offline or until license key session expires.
 
 ![Tool Activation](./assets/tool-activation.png)
 
 ## Step 7: Done!
 
-After activation, the connection with the app will be resumed, and window with tools will be opened. 
+After activation, the connection with the app will be resumed, and a window with tools will be opened. 
 
 ## Further Reading
 
@@ -145,3 +134,5 @@ After activation, the connection with the app will be resumed, and window with t
 - Custom [DeveloperToolsOptions configuration](./advanced/options-reference.md) reference
 - [Frequently Asked Questions](./faq)
 - [Settings](./settings.md) and [Shortcuts](./shortcuts.md) documentation
+- [Attaching Browser or Mobile application](./advanced/attaching-browser-or-mobile.md)
+- [Attaching to the Remote Tool](./advanced/attaching-to-the-remote-tool.md)

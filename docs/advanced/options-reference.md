@@ -13,7 +13,7 @@ If unset, `Application.Name` or entry assembly name is used.
 ## DeveloperToolsOptions.ConnectOnStartup
 
 Defines if the app should be connected to dev tools on startup.
-By default: false.
+By default: `true` on iOS and Android, `false` everywhere else.
 
 ## DeveloperToolsOptions.Runner
 
@@ -32,13 +32,13 @@ Possible options are:
 
 1. `DeveloperToolsOptions.DotNetTool` - global .NET tool.
 2. `DeveloperToolsOptions.AppleBundle` - runs macOS bundle by its ID. To make it work, you need to run `Developer Tools` process directly at least once.
-3. `DeveloperToolsOptions.NoOp` - do nothing. This option assumes the `Developer Tools` application was started by user manually. 
+3. `DeveloperToolsOptions.NoOp` - do nothing. This option assumes the `Developer Tools` application was started by the user manually. 
 4. `DeveloperToolsRunner.CreateFromExecutable(string)` - run executable by full path. This option is not recommended, unless you prefer a custom installation of the tool.
 5. Default: `DeveloperToolsRunner.GetDefaultForPlatform()` - returns `DotNetTool` on desktop or `NoOp` on mobile/browser.
 
 ## DeveloperToolsOptions.Protocol
 
-`DiagnosticsSupport` uses one of two transport protocols to communicate between user app and `Developer Tools` process: HTTP and Named Pipes.
+`DiagnosticsSupport` uses one of two transport protocols to communicate between the user app and `Developer Tools` process: HTTP and Named Pipes.
 
 ```csharp
 this.AttachDeveloperTools(o =>
@@ -72,7 +72,7 @@ To learn more about `Developer Tools` logging, please read [Reporting Issue](./r
 
 ## DeveloperToolsOptions.LoggerCollector
 
-Defines collector which listens for logs to be displayed in `Developer Tools`.
+Defines a collector which listens for logs to be displayed in `Developer Tools`.
 
 By default, `Developer Tools` will listen only to Avalonia logs and display them in the [Logger tools](./tools/logs.md).
 

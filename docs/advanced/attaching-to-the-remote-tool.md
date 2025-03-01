@@ -4,7 +4,7 @@
 1. Local network access (e.g., Virtual Machines or devices on same Wi-Fi)
 2. Internet access using VPN (recommended for security)
 
-`Developer Tools` runs an HTTP server on port `29414`. The key is ensuring this server is accessible from the connecting device.
+`Developer Tools` runs an HTTP server on port `29414`. The key is ensuring this server is accessible from the connecting machine.
 
 ## Local Network access
 

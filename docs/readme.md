@@ -16,6 +16,7 @@
 - - [Metrics](./tools/metrics.md)
 - Advanced
 - - [Reference to DeveloperToolsOptions](./advanced/options-reference.md)
+- - [Attaching to Browser or Mobile](./advanced/attaching-browser-or-mobile.md)
 - - [Attaching to the Previewer](./advanced/attaching-to-the-previewer.md)
 - - [Attaching WSL2 application](./advanced/attaching-wsl.md)
-- - [Attaching to the remote tool](./advanced/attaching-to-the-remote-tool.md)
+- - [Attaching to the remote tools](./advanced/attaching-to-the-remote-tool.md)

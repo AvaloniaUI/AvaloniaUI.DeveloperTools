@@ -10,7 +10,7 @@ Experimental.
 
 Yet, these extensions are limited in diagnostic features, making it harder to analyze visual trees and actual control placements.
 
-With `Developer Tools` running out-of-process, it is now possible to attach previewing app to the tool.
+With `Developer Tools` running out-of-process, it is now possible to attach a previewing app to the tool.
 
 ![Example of DevTools app attached to the previewer process](../assets/attaching-to-previewer.png)
 
@@ -21,13 +21,13 @@ Preview extensions don't support any form of keyboard input, making `ConnectOnSt
 ```csharp
 this.AttachDeveloperTools(o =>
 {
-    o.ConnectOnStartup = Design.IsDesignMode;
+    o.ConnectOnStartup |= Design.IsDesignMode;
 });
 ```
 
 By default, `DeveloperToolsOptions.Runner` is disabled in `IsDesignMode`. It was done to avoid unnecessary noise and processes opening each time any XAML file is opened.
 
-Instead, just like on browser or mobile, `Developer Tools` app should be opened independently.
+Instead, like on the browser or mobile, the `Developer Tools` app should be opened independently.
 
 ## Troubleshooting
 
@@ -52,4 +52,4 @@ Instead, it's possible to use corresponding action buttons or shortcuts in the `
 ### Developer Tools opens way too many windows
 
 `Developer Tools` opens a tool window per connected process.
-If user has multiple XAML previewer tabs, then multiple tool windows will be opened per each.
+If the user has multiple XAML previewer tabs, then multiple tool windows will be opened per each.

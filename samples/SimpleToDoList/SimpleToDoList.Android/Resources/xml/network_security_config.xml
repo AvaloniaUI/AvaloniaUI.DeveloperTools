@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- For more details, visit https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/ -->
+<network-security-config>
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">10.0.2.2</domain> <!-- Debug address -->
+  </domain-config>
+</network-security-config>
