@@ -15,7 +15,7 @@ But for convenience of keeping single installation it is recommended to attach L
     ```csharp
     this.AttachDeveloperTools(o =>
     {
-        o.Protocol = DeveloperToolsProtocol.CreateHttp(IPAddress.Parse("192.168.0.1"));
+        o.Protocol = DeveloperToolsProtocol.CreateHttp(IPAddress.Parse("YOUR_LOCAL_NETWORK_HOST_IP"));
     });
     ```
 
