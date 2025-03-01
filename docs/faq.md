@@ -21,6 +21,16 @@ Unlikely the legacy Avalonia DevTools, this package is not shipped with heavy de
 
 But it is still advised to exclude this package on production builds for security and bundle size reasons.
 
+To do that, `Condition="'$(Configuration)' == 'Debug'"'` can be used. But modern option with IncludeAssets/PrivateAssets is recommended to keep .NET SDK restore process stable with packages lock files:
+```xml
+<PackageReference Include="AvaloniaUI.DiagnosticsSupport.Avalonia" Version="">
+  <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+  <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+</PackageReference>
+```
+
+Combined with `#if DEBUG` for the `this.AttachDeveloperTools()`.
+
 ## Is AvaloniaUI Developer Tools open source?
 
 No, it's not.
