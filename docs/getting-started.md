@@ -63,7 +63,7 @@ This guide demonstrates global installation of the tool. But local installation 
 For macOS:
 
 ```bash
-dotnet tool install --global AvaloniaUI.DeveloperTools.macOS --prerelease"
+dotnet tool install --global AvaloniaUI.DeveloperTools.macOS --prerelease
 ```
 
 For Windows:
