@@ -90,7 +90,7 @@ This package can be installed either in the executable project with your Program
 In both cases, command is the same:
 
 ```bash
-dotnet add package AvaloniaUI.DiagnosticsSupport.Avalonia --prerelease
+dotnet add package AvaloniaUI.DiagnosticsSupport --prerelease
 ```
 
 ## Step 4: Configuring your project
