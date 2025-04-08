@@ -1,4 +1,4 @@
-# Avalonia UI Developer Tools
+# AvaloniaUI Developer Tools
 
 Elevate your debugging experience with professional-grade developer tooling that gives you unparalleled insight into your Avalonia applications. Inspect visual trees, debug bindings effortlessly, and fine-tune your UI for maximum responsiveness, all with ease and precision.
 
