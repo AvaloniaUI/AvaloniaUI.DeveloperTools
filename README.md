@@ -8,9 +8,5 @@ For installation and usage instructions, see the [documentation](https://docs.av
 
 ## Issues and Feature Requests
 
-Please use this repository to report bugs or request new features. When filing an issue, include:
-
-- Avalonia UI version
-- Developer Tools version
-- Steps to reproduce
-- Expected vs actual behavior
+This repository is archived, any new feature requests or bug reports should be reported to [Avalonia Support](https://support.avaloniaui.net/support/tickets) or [Avalonia Community](https://avaloniaui.community/) portals.
+Changelog is now posted on the NuGet directly: https://www.nuget.org/packages/AvaloniaUI.DeveloperTools.Windows#releasenotes-body-tab. This repository releases are no longer updated.
